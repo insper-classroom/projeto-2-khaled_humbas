@@ -51,6 +51,7 @@ def lista_todos():
     if not imoveis: # verifica se não há imóveis
         cursor.close()
         conn.close()
+        #
         return jsonify({"mensagem": "Nenhum imóvel encontrado!"}), 200 # banco de dados vazio, há requisição
     else:
         conn.close()
