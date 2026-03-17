@@ -19,8 +19,6 @@ url_base = 100.48.20.219
 | `data_aquisicao` | string | Data no formato YYYY-MM-DD | "2024-03-10" |
 
 # PUT /imovel/<int:id> -> Muda os dados de um imóvel com id inteiro
-
-# POST /imovel -> coloca um novo imóvel ao banco de dados
 ## Corpo da Requisição (JSON)
 
 ### Campos Obrigatórios
