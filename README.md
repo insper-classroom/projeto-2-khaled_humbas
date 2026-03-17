@@ -1,6 +1,6 @@
-Rotas API:
+# Rotas API:
 
-url_base = 100.48.20.219
+# url_base = 100.48.20.219 
 # GET /imovel -> retorna todos os imóveis
 # GET /imovel/<int:id> -> retorna imóvel específico com algum id inteiro
 # POST /imovel -> coloca um novo imóvel ao banco de dados
