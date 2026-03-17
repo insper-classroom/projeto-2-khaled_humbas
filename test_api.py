@@ -638,7 +638,7 @@ def test_lista_por_tipo_nenhum_imovel(mock_conectar_banco, client, imovel_teste_
     mock_conn.close.assert_called_once()
 
     assert response.status_code == 200
-    assert response.get_json()["mensagem"] == f"Não foram encontrados imóveis com tipo {imovel_teste.tipo}"
+    assert response.get_json() == []
 
 
 @patch("api.conectar_banco")
@@ -743,4 +743,4 @@ def test_lista_por_cidade_nenhum_imovel(mock_conectar_banco, client, imovel_test
     mock_conn.close.assert_called_once()
 
     assert response.status_code == 200
-    assert response.get_json()["mensagem"] == f"Não foram encontrados imóveis com cidade: {imovel_teste.cidade}"
+    assert response.get_json() == []

@@ -240,7 +240,7 @@ def lista_por_tipo(tipo):
     else:
         conn.close()
         cursor.close()
-        return jsonify({"mensagem": f"Não foram encontrados imóveis com tipo {tipo}"}), 200
+        return jsonify([]), 200
     
 @app.route("/imovel/cidade/<string:cidade>", methods=["GET"])
 def lista_por_cidade(cidade):
@@ -270,6 +270,6 @@ def lista_por_cidade(cidade):
     else:
         conn.close()
         cursor.close()
-        return jsonify({"mensagem": f"Não foram encontrados imóveis com cidade: {cidade}"}), 200
+        return jsonify([]), 200
 if __name__ == '__main__':
     app.run(debug=False)
