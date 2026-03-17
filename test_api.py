@@ -587,7 +587,7 @@ def test_lista_por_tipo_ok(mock_conectar_banco, client, imovel_teste_1):
     assert dados == [imovel_dict]
 
 @patch("api.conectar_banco")
-def test_lista_por_tipo_erro(mock_conectar_banco, client, imovel_teste_1):
+def test_lista_por_tipo_erro_cursor(mock_conectar_banco, client, imovel_teste_1):
     # mocka a coneexão e cursor
     imovel_teste = imovel_teste_1
     mock_conn = MagicMock()
@@ -640,6 +640,7 @@ def test_lista_por_tipo_nenhum_imovel(mock_conectar_banco, client, imovel_teste_
     assert response.status_code == 200
     assert response.get_json()["mensagem"] == f"Não foram encontrados imóveis com tipo {imovel_teste.tipo}"
 
+
 @patch("api.conectar_banco")
 def test_lista_por_cidade_ok(mock_conectar_banco, client, imovel_teste_1):
     # mocka a coneexão e cursor
@@ -691,7 +692,7 @@ def test_lista_por_cidade_ok(mock_conectar_banco, client, imovel_teste_1):
     assert dados == [imovel_dict]
 
 @patch("api.conectar_banco")
-def test_lista_por_cidade_erro(mock_conectar_banco, client, imovel_teste_1):
+def test_lista_por_cidade_erro_cursor(mock_conectar_banco, client, imovel_teste_1):
     # mocka a coneexão e cursor
     imovel_teste = imovel_teste_1
     mock_conn = MagicMock()
