@@ -210,7 +210,7 @@ def remove_imovel(id):
 
     cursor.close()
     conn.close()
-    return jsonify(f"Imóvel removido de id:{id}"), 200
+    return jsonify({"mensagem": "imóvel removido", "id": id}), 200
 
 @app.route("/imovel/tipo/<string:tipo>", methods=["GET"])
 def lista_por_tipo(tipo):

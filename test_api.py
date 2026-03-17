@@ -488,7 +488,7 @@ def test_remove_imovel_ok(mock_conectar_banco, client):
 
     # Verifica resposta
     assert response.status_code == 200
-    assert response.get_json() == "Imóvel removido de id:1"
+    assert response.get_json() == {"mensagem": "imóvel removido", "id": 1}
 
 @patch("api.conectar_banco")
 def test_remove_imovel_imovel_nao_existe(mock_conectar_banco, client):
