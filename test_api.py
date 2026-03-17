@@ -112,7 +112,7 @@ def test_lista_todos_vazio(mock_conectar_banco, client):
     # Verifica se a query SQL foi executada
     mock_cursor.execute.assert_called_once_with("""SELECT * from imoveis""")
 
-    assert response.get_json() == {"erro": "Nenhum imóvel encontrado!"}
+    assert response.get_json() == {"mensagem": "Nenhum imóvel encontrado!"}
 
     # Verifica se fetchall foi chamado
     mock_cursor.fetchall.assert_called_once()
