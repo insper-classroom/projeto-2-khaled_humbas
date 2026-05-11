@@ -206,7 +206,7 @@ def remove_imovel(id):
         err_msg = f"Erro ao remover imóvel de id " + id + f"Erro: {e}"
         conn.close()
         cursor.close()
-        return jsonify({erro: err_msg}), 500
+        return jsonify({"erro": err_msg}), 500
 
     cursor.close()
     conn.close()
